@@ -21,7 +21,8 @@ const server = http.createServer((req, res) => {
 	}
 	
 	fs.readdir(baseFolder, (err, files) => {
-		
+		if (err) { console.error(err); return;}
+
 		if (files.length === 0)
 			return onDone();
 		

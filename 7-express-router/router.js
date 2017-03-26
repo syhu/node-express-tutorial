@@ -10,6 +10,11 @@ module.exports = function (app) {
 		
 	app.get('/login', function (req, res) {
 		res.render('login', {name: req.query.name});
+	});
+
+	app.post('/LOGIN', function (req, res) {
+		console.log(req.body);
+		res.end();
 	});	
 };
 
